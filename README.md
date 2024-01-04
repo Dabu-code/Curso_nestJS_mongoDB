@@ -20,7 +20,7 @@ npm install
 Para iniciar la aplicación, ejecuta el siguiente comando:
 
 ```bash
-npm run start
+npm run start:dev
 ```
 
 La aplicación se iniciará en el puerto 3000. Puedes acceder a los endpoints de API GraphQL en http://localhost:3000/graphql. Puedes acceder a los endpoints de API REST en http://localhost:3000/api.

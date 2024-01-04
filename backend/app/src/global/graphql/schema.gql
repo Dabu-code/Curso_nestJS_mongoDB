@@ -1,0 +1,45 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CommentDto {
+  author: String!
+  content: String!
+  uuid: String
+}
+
+type CommentSchema {
+  author: String!
+  content: String!
+  uuid: String!
+}
+
+type Mutation {
+  createPost(data: PostDto!): PostSchema!
+  createPostComment(data: CommentDto!, uuidPost: String!): PostSchema!
+  deletePost(uuid: String!): PostSchema!
+  deletePostComment(uuid: String!, uuidPost: String!): PostSchema!
+  updatePost(data: PostDto!): PostSchema!
+  updatePostComment(data: CommentDto!, uuidPost: String!): PostSchema!
+}
+
+input PostDto {
+  author: String!
+  comments: [CommentDto!]!
+  content: String!
+  title: String!
+  uuid: String
+}
+
+type PostSchema {
+  author: String!
+  comments: [CommentSchema!]!
+  content: String!
+  title: String!
+  uuid: String!
+}
+
+type Query {
+  getPost(uuid: String!): PostSchema!
+  listPost: [PostSchema!]!
+}
